@@ -346,7 +346,7 @@ Once you have the server running with SSE transport, you can connect to it using
 >
 > **Note for Docker users**: Use `host.docker.internal` instead of `localhost` if your client is running in a different container. This will apply if you are using this MCP server within n8n!
 
-> **Note for Claude Code users**: 
+> **Note for Claude Code users**:
 ```
 claude mcp add-json crawl4ai-rag '{"type":"http","url":"http://localhost:8051/sse"}' --scope user
 ```
@@ -383,10 +383,10 @@ Add this server to your MCP configuration for Claude Desktop, Windsurf, or any o
   "mcpServers": {
     "crawl4ai-rag": {
       "command": "docker",
-      "args": ["run", "--rm", "-i", 
-               "-e", "TRANSPORT", 
-               "-e", "OPENAI_API_KEY", 
-               "-e", "SUPABASE_URL", 
+      "args": ["run", "--rm", "-i",
+               "-e", "TRANSPORT",
+               "-e", "OPENAI_API_KEY",
+               "-e", "SUPABASE_URL",
                "-e", "SUPABASE_SERVICE_KEY",
                "-e", "USE_KNOWLEDGE_GRAPH",
                "-e", "NEO4J_URI",
@@ -426,7 +426,7 @@ The Neo4j database stores code structure as:
 
 **Nodes:**
 - `Repository`: GitHub repositories
-- `File`: Python files within repositories  
+- `File`: Python files within repositories
 - `Class`: Python classes with methods and attributes
 - `Method`: Class methods with parameter information
 - `Function`: Standalone functions
